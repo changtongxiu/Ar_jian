@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" href="css/index1.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="font_pl8mhcv0kr/iconfont.css">
+</head>
+<body>
+	<div class="conten">
+		<div class="box">
+
+			<div class="header"> <a class="iconfont icon-fanhui" href="index.html"></a>林老师的xxx战绩</div>
+		</div>
+		<div class="banner">
+			<div class="shoer">总收益</div>
+			<div class="num"><span id="s1"></span>%</div>
+			<div class="month">
+				<ul>
+					<li>日净收益</li>
+					<li>周净收益</li>
+					<li>月净收益</li>
+					
+				</ul>
+				<ul class="money"><li>xxx美金</li>
+					<li>xxx美金 </li>
+					<li>xxx美金</li></ul>
+			</div>
+			<div class="fir">
+			<span>战绩排行榜总排名:</span>
+			<span>1名</span>
+			</div>
+		</div>
+		<div class="teacher">林老师</div>
+		<!-- <div class="solid" style="height: 0.1rem;width: 100%;"></div> -->
+		<div class="win"><p>战绩</p></div>
+		<!-- <div class="solid" style="height: 0.1rem;width: 100%;"></div> -->
+		<div class="footer">
+			<div id="container" style="height: 2rem;width: 100%;"></div>
+		</div>
+	</div>
+
+	 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        smooth: true
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+</script>
+<script language="javascript">
+function doit(oid,n){
+   var o = document.getElementById(oid);
+   var i = parseFloat(o.innerHTML) + 1;
+   if(isNaN(i)) i = 0;
+   o.innerHTML = i.toString();
+   if(i<n) setTimeout('doit(\''+oid+'\','+n+')',10);
+}
+doit('s1',88);
+// doit('s2',100);
+
+</script>
+
+</body>
+</html>

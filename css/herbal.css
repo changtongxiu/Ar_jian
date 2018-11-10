@@ -1,0 +1,187 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+body,html{
+	width: 100%;
+	background: darkred;
+}
+html{
+	font-size: 100px;
+}
+.header{
+	width: 100%;
+	text-align: center;
+	font-size: 0.2rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	color: white;
+	background: darkred;
+}
+.banner{
+	color: white;
+	width: 100%;
+	height: 1.2rem;
+	background:  #eee;
+}
+.banner img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.important-title{
+	font-size: .16rem;
+	padding:0.1rem 0;
+	font-family: '"Times New Roman", Times, serif';
+	background: url('../images/beijing.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center; 
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+	/*box-shadow:0 0 5px #3fb0ff inset;*/
+	margin-top: .1rem;
+}
+.earning{
+	background:darkred; /* 标准的语法 */
+	/*box-shadow:0 0 5px rgba(0,0,0,.5) inset;*/
+	/*border-radius:.2rem;*/
+	margin-top: .1rem;
+	font-size: .14rem;
+	color: white;
+	/*border: 1px solid white;*/
+}
+.nexter{
+	padding: 0 .2rem;
+	/*background: darkred;*/
+}
+.earning span{
+	display: inline-block;
+	padding:.1rem .23rem;
+}
+.earning-list{
+	display: none;
+	background:	#FFEFDB;
+	border-radius:.25rem .25rem 0 0;
+}
+.earning-list a{
+	 /* 标准的语法 */
+	font-size: .14rem;
+    display: flex;
+    height: .4rem;
+    color: darkred;
+    /*box-shadow:0 -1px 5px #3fb0ff inset;*/
+    /*border-bottom: 1px solid dark;*/
+}
+.earning-list a:first-child{
+	
+	padding-top: .1rem;
+}
+/*.earning-list a:hover{
+	color: black;
+	background: rgba(0,0,0,.05)
+}*/
+.earning-list a div:nth-of-type(1){
+	flex-grow:1;
+}
+.earning-list a div:nth-of-type(2){
+	flex-grow:1;
+}
+.earning-list a div:nth-of-type(3){
+	flex-grow:1;
+}
+.earning-list a div:nth-of-type(4){
+	flex-grow:1;
+}
+.num{
+	padding:0rem .1rem;
+	font-size: .18rem;
+	/*font-weight: bold;*/
+	/*font-style: 	italic;*/
+	width: .3rem;
+	height: 100%;
+	line-height: .4rem;
+	text-align: center;
+	/*color: red;*/
+}
+.photo{
+	line-height: .4rem;
+	width: 0.4rem;
+	overflow: hidden;
+	padding:0.05rem 0;
+}
+.photo img{
+	line-height: .4rem;
+	width: 100%;
+	border-radius: 50%;
+}
+.teacher{
+	padding:0 0.07rem;
+	height: 100%;
+	line-height: .4rem;
+	font-size: .14rem;
+	color: 	#696969;
+	width: 1rem;
+}
+.rate{
+	padding:.12rem 0;
+	/*padding-right: .01rem;*/
+	padding-left: .5rem;
+	font-size: .14rem;
+	color: 	#696969;
+	width: 2rem;
+}
+.active{
+	/*background: white;*/
+	/*border-radius: .5rem;*/
+	color: yellow;
+	font-weight: bold;
+	/*border-bottom: 2px solid yellow;*/
+}
+.earning-list.show{
+	display: block;
+}
+/*插件Swiper*/
+.swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .icon-fanhui{
+    	display: block;
+    	float: left;
+    }
+/*固定定位*/
+    .upper{ 
+    	position:fixed; 
+    	z-index:40;
+     	width:100%;
+      	background-color:darkred;
+     	top:0px;
+     }
